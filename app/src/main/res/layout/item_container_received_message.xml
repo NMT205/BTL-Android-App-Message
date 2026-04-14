@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAva6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/layoutContent">
+
+            <ImageView
+                android:id="@+id/imgProfile2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/cardAva6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.75">
+
+            <TextView
+                android:id="@+id/txtMessage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_received_massage"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/imgMessage1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDateTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#A9A5A5"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/layoutContent"
+            app:layout_constraintTop_toBottomOf="@id/layoutContent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
